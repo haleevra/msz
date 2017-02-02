@@ -9,54 +9,132 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КорСчет</dataPath>
 			<field>КорСчет</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПодразделениеКор</dataPath>
 			<field>ПодразделениеКор</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КорСубконто1</dataPath>
 			<field>КорСубконто1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КорСубконто2</dataPath>
 			<field>КорСубконто2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КорСубконто3</dataPath>
 			<field>КорСубконто3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Организация</dataPath>
 			<field>Организация</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ВалютаКор</dataPath>
 			<field>ВалютаКор</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Валюта</dataPath>
 			<field>Валюта</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Субконто1</dataPath>
 			<field>Субконто1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Субконто2</dataPath>
 			<field>Субконто2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Субконто3</dataPath>
 			<field>Субконто3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Счет</dataPath>
 			<field>Счет</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Подразделение</dataPath>
 			<field>Подразделение</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Сумма</dataPath>
@@ -81,6 +159,9 @@
 				<dcscom:dimension>true</dcscom:dimension>
 				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
 			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Контрагенты</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Количество</dataPath>
@@ -106,6 +187,9 @@
 				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
 			</role>
 			<presentationExpression>НоменклатураПредставление</presentationExpression>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Квартал</dataPath>
@@ -261,9 +345,9 @@
 	КОНЕЦ КАК Город,
 	КонтрагентыМенеджер.Значение КАК Менеджер,
 	Выручка.КорСубконто1 КАК Контрагент,
-	Выручка.Субконто3 КАК Номенклатура,
-	Выручка.Субконто3.ЕдОтпуска.Вес КАК Фасовка,
-	СУММА(Количество.КоличествоОборотКт * Выручка.Субконто3.ЕдОтпуска.Вес) КАК Количество,
+	Выручка.Субконто1 КАК Номенклатура,
+	Выручка.Субконто1.ЕдОтпуска.Вес КАК Фасовка,
+	СУММА(Количество.КоличествоОборотКт * Выручка.Субконто1.ЕдОтпуска.Вес) КАК Количество,
 	СУММА(Выручка.СуммаОборотКт) КАК Сумма,
 	Выручка.Регистратор КАК Регистратор,
 	Выручка.ПериодСекунда КАК Секунда,
@@ -271,12 +355,12 @@
 	Выручка.ПериодКвартал КАК Квартал,
 	Выручка.ПериодПолугодие КАК Полугодие,
 	Выручка.ПериодГод КАК Год,
-	ВЫРАЗИТЬ(Выручка.Субконто3.НаименованиеПолное КАК СТРОКА(1000)) КАК НоменклатураПредставление
+	ВЫРАЗИТЬ(Выручка.Субконто1.НаименованиеПолное КАК СТРОКА(1000)) КАК НоменклатураПредставление
 ИЗ
-	РегистрБухгалтерии.Хозрасчетный.Обороты(, , Авто, Счет В ИЕРАРХИИ (&amp;СчетаВыручки), , , , ) КАК Выручка
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрБухгалтерии.Хозрасчетный.Обороты(, , Авто, Счет = &amp;ГотоваяПродукция, , Субконто1.ВидНоменклатуры.Наименование = "Продукция", , ) КАК Количество
+	РегистрБухгалтерии.Хозрасчетный.Обороты(, , Авто, Счет В ИЕРАРХИИ (&amp;СчетаВыручки), &amp;Номенклатура, , , &amp;Контрагенты) КАК Выручка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрБухгалтерии.Хозрасчетный.Обороты(, , Авто, Счет = &amp;ГотоваяПродукция, &amp;Номенклатура, Субконто1.ВидНоменклатуры.Наименование = "Продукция", , ) КАК Количество
 		ПО Выручка.Регистратор = Количество.Регистратор
-			И Выручка.Субконто3 = Количество.Субконто1
+			И Выручка.Субконто1 = Количество.Субконто1
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты.КонтактнаяИнформация КАК ЮридическийАдрес
 		ПО Выручка.КорСубконто1 = ЮридическийАдрес.Ссылка
 			И (ЮридическийАдрес.Вид = ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ЮрАдресКонтрагента))
@@ -284,10 +368,10 @@
 		ПО Выручка.КорСубконто1 = КонтрагентыМенеджер.Ссылка
 			И (КонтрагентыМенеджер.Свойство.Заголовок = "Менеджер")
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураБренд
-		ПО Выручка.Субконто3 = НоменклатураБренд.Ссылка
+		ПО Выручка.Субконто1 = НоменклатураБренд.Ссылка
 			И (НоменклатураБренд.Свойство.Заголовок = "Бренд")
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураСегмент
-		ПО Выручка.Субконто3 = НоменклатураСегмент.Ссылка
+		ПО Выручка.Субконто1 = НоменклатураСегмент.Ссылка
 			И (НоменклатураСегмент.Свойство.Заголовок = "Сегмент")
 
 СГРУППИРОВАТЬ ПО
@@ -298,7 +382,6 @@
 	КОНЕЦ,
 	Выручка.ПериодДень,
 	КонтрагентыМенеджер.Значение,
-	Выручка.Субконто3,
 	Выручка.КорСубконто1,
 	Выручка.Регистратор,
 	Выручка.ПериодМесяц,
@@ -306,8 +389,9 @@
 	Выручка.ПериодПолугодие,
 	Выручка.ПериодГод,
 	Выручка.ПериодКвартал,
-	Выручка.Субконто3.ЕдОтпуска.Вес,
-	ВЫРАЗИТЬ(Выручка.Субконто3.НаименованиеПолное КАК СТРОКА(1000))</query>
+	Выручка.Субконто1,
+	Выручка.Субконто1.ЕдОтпуска.Вес,
+	ВЫРАЗИТЬ(Выручка.Субконто1.НаименованиеПолное КАК СТРОКА(1000))</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Количество</dataPath>
@@ -399,6 +483,34 @@
 		</value>
 		<useRestriction>false</useRestriction>
 	</parameter>
+	<parameter>
+		<name>Контрагенты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контрагенты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.Контрагенты</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Номенклатура</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Номенклатура</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.Номенклатура</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>ПродажиПоМесяцам</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -444,7 +556,36 @@
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
-				<dcsset:userSettingID>1d7a44e5-e40e-40c3-8495-cd8ea7d0d235</dcsset:userSettingID>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>InHierarchy</dcsset:comparisonType>
+					<dcsset:userSettingID>d7dc1316-2f45-4cb8-8044-6b8e9b5df11e</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Менеджер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>00b4091c-2846-4f99-bcc8-c404ba0c8bfd</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Город</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>InHierarchy</dcsset:comparisonType>
+					<dcsset:userSettingID>075b1a45-bd4b-45d0-9902-0c34fd5d0065</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Фасовка</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -466,6 +607,16 @@
 						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
 					</dcscor:value>
 					<dcsset:userSettingID>bdba6711-6015-4ca3-a4e3-636ccfd6f949</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Контрагенты</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Номенклатура</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
@@ -563,7 +714,36 @@
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
-				<dcsset:userSettingID>d2e56b6c-9b5d-461c-85c2-b83b300233a0</dcsset:userSettingID>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>InHierarchy</dcsset:comparisonType>
+					<dcsset:userSettingID>0d030f3e-fe80-4189-b9e3-3955efe07df5</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Менеджер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>2b8e8572-4ca5-4490-95e9-09b2a535ebbb</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Город</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>InHierarchy</dcsset:comparisonType>
+					<dcsset:userSettingID>492e3e04-d9cd-4692-958e-0abc016b675c</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Фасовка</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
